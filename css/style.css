@@ -18,7 +18,7 @@ a {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
   display: block;
   border-radius: 5px;
 }
@@ -51,7 +51,7 @@ img {
       "header"
       "sidenav"
       "content"
-      "anuncio"
+      "anuncios"
       "footer";
   }
 }
@@ -146,7 +146,7 @@ img {
 @media (max-width: 760px) {
   .sidenav {
     position: relative;
-    padding: 0 30px;
+    /* padding: 0 30px; */
     overflow-x: auto;
     /*safari -p/ o touch funcionar corretamente*/
     -webkit-overflow-scrolling: touch;
@@ -178,6 +178,12 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
+}
+
+@media (max-width: 600px) {
+  .content {
+    grid-template-columns: auto;
+  }
 }
 
 .col-wide {
@@ -275,7 +281,7 @@ p {
   border-radius: 5px;
   box-shadow: 5px 5px 15px 0 rgba(44, 44, 44, 0.15);
   background: linear-gradient(135deg, #8844ee, #b07dfb);
-  align-self: star;
+  align-self: start;
 }
 
 .citacao p {
@@ -305,7 +311,8 @@ p {
   display: grid;
   align-content: start;
   padding: 30px;
-  grid-gap: 30px;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 /* FOOTER */
